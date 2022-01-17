@@ -1,0 +1,27 @@
+main:
+	const "helloworld" eax
+
+	const print ebx
+	addi ebx ebp ebx
+	call ebx
+
+	ret
+
+// prints string in eax
+print:
+	addi ebp eax eax
+
+	// load length
+	load eax ebx 4
+
+	// get start of string
+	const 4u ecx
+	addi eax ecx eax
+
+	// load print call
+	const 0u ecx
+	
+	// call print
+	call ecx
+
+	ret
